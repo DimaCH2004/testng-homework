@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="My Test Suite" >
+    <test name="Checkbox and RadioButton Tests" parallel="classes">
+        <groups>
+            <define name="EndGroup">
+                <include name=".*End"/>
+            </define>
+            <run>
+                <include name="EndGroup"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="CheckboxTests" />
+            <class name="RadioButtonTests" />
+        </classes>
+    </test>
+    <test name="retry">
+        <classes>
+            <class name="RetryAnalyzer"/>
+        </classes>
+    </test>
+</suite>
