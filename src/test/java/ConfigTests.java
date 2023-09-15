@@ -1,5 +1,4 @@
 import com.codeborne.selenide.Configuration;
-
 import com.codeborne.selenide.Selenide;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -8,7 +7,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
-
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -30,6 +28,9 @@ public class ConfigTests {
         } else if ("RadioButtonTests".equals(className)) {
             Configuration.baseUrl = "https://demoqa.com/radio-button";
             Configuration.reportsFolder = "RadioButtonFailedTests";
+        } else if ("RegistrationFormTest".equals(className)) {
+        Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
+        Configuration.reportsFolder = "RegistrationFormFailedTests";
         }
     }
     @BeforeMethod (groups = {"BackEnd","FrontEnd"})
