@@ -28,7 +28,7 @@ public class ConfigTests {
         } else if ("RadioButtonTests".equals(className)) {
             Configuration.baseUrl = "https://demoqa.com/radio-button";
             Configuration.reportsFolder = "RadioButtonFailedTests";
-        } else if ("RegistrationFormTest".equals(className)) {
+        } else if ("RegistrationFormTest".equals(className) || "FactoryRegistrationFormTest".equals(className)) {
         Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
         Configuration.reportsFolder = "RegistrationFormFailedTests";
         }
