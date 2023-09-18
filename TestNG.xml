@@ -1,22 +1,35 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="My Test Suite" >
-    <test name="Checkbox and RadioButton Tests" parallel="classes">
-        <groups>
-            <define name="EndGroup">
-                <include name=".*End"/>
-            </define>
-            <run>
-                <include name="EndGroup"/>
-            </run>
-        </groups>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+    <test name="FormTest">
+        <parameter name="firstName" value="Dima"/>
+        <parameter name="lastName" value="Chubinidze"/>
+        <parameter name="gender" value="Male"/>
+        <parameter name="mobileNumber" value="579172744"/>
         <classes>
-            <class name="CheckboxTests" />
-            <class name="RadioButtonTests" />
+            <class name="RegistrationFormTest"/>
         </classes>
     </test>
-    <test name="retry">
+    <test name="FormTest2">
+        <parameter name="firstName" value="Dima2"/>
+        <parameter name="lastName" value="Chubinidze2"/>
+        <parameter name="gender" value="Male"/>
+        <parameter name="mobileNumber" value="579172745"/>
         <classes>
-            <class name="RetryAnalyzer"/>
+            <class name="RegistrationFormTest"/>
+        </classes>
+    </test>
+    <test name="FormTest3">
+        <parameter name="firstName" value="Dima3"/>
+        <parameter name="lastName" value="Chubinidze3"/>
+        <parameter name="gender" value="Male"/>
+        <parameter name="mobileNumber" value="579172746"/>
+        <classes>
+            <class name="RegistrationFormTest"/>
+        </classes>
+    </test>
+    <test name="FactoryFormTest">
+        <classes>
+            <class name="FactoryRegistrationFormTest"/>
         </classes>
     </test>
 </suite>
